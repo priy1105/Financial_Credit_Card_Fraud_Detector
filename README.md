@@ -132,6 +132,8 @@ To handle outliers, we capped values using the Interquartile Range (IQR) method 
 
 ## Model Comparison  
 We compared both models using accuracy, precision, recall, and F1-score metrics, summarized in a DataFrame for easy reference.
+The Random Forest model was selected for deployment due to its significantly higher Recall (0.99) and overall Accuracy (94.27%) and F1-Score (0.75), making it better at identifying the minority class (fraud).
+
 
 ---
 
