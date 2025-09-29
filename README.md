@@ -57,7 +57,7 @@ streamlit
 joblib
 matplotlib
 seaborn
-
+```
 # Credit Card Fraud Detection
 
 ## Table of Contents
