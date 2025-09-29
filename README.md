@@ -58,25 +58,6 @@ joblib
 matplotlib
 seaborn
 ```
-# Credit Card Fraud Detection
-
-## Table of Contents
-1. [Project Overview](#project-overview)  
-2. [Problem Statement](#problem-statement)  
-3. [Project Objective](#project-objective)  
-4. [Column Dictionary](#column-dictionary)  
-5. [Data Preprocessing](#data-preprocessing)  
-   - [Missing Data](#missing-data)  
-   - [Outlier Detection and Handling](#outlier-detection-and-handling)  
-6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)  
-7. [Feature Engineering](#feature-engineering)  
-8. [Feature Selection, Train-Test Split & Scaling](#feature-selection-train-test-split--scaling)  
-9. [Model Training](#model-training)  
-   - [Logistic Regression](#logistic-regression)  
-   - [Random Forest](#random-forest)  
-10. [Model Comparison](#model-comparison)  
-11. [Model Deployment](#model-deployment)  
-12. [Conclusion](#conclusion)
 
 ## Data Preprocessing  
 
