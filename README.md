@@ -1,3 +1,63 @@
+# 💳 Credit Card Fraud Detection using Machine Learning
+
+## Project Overview
+
+This project focuses on developing a robust machine learning model to accurately detect fraudulent credit card transactions, thereby helping financial institutions mitigate financial losses and enhance customer trust.
+
+The core challenge lies in the highly **imbalanced nature** of the dataset, where fraudulent transactions are a rare event. The goal is to build a model that maximizes the detection of true fraud cases (high recall) while minimizing the flagging of legitimate transactions as fraudulent (high precision and low false positives).
+
+## Table of Contents
+1. [Project Objective](#project-objective)
+2. [Data Dictionary](#data-dictionary)
+3. [Setup and Installation](#setup-and-installation)
+4. [Methodology](#methodology)
+    - [Data Preprocessing](#data-preprocessing)
+    - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
+    - [Feature Engineering](#feature-engineering)
+5. [Model Training and Results](#model-training-and-results)
+    - [Model Comparison](#model-comparison)
+6. [Conclusion and Recommendations](#conclusion-and-recommendations)
+
+---
+
+## 🎯 Project Objective
+
+To build and deploy a machine learning model capable of accurately predicting fraudulent credit card transactions, with an emphasis on **maximizing fraud detection (Recall)** while **minimizing false positives** to avoid disrupting legitimate customer activities.
+
+## 🗃️ Data Dictionary
+
+The model uses the following features to classify a transaction as legitimate (0) or fraudulent (1):
+
+| Column Name | Description |
+|---|---|
+| `distance_from_home` | Distance from the cardholder's home to the transaction location |
+| `distance_from_last_transaction` | Distance from the previous transaction |
+| `ratio_to_median_purchase_price` | Ratio of transaction value to the median purchase price |
+| `repeat_retailer` | Whether the transaction was from a repeat retailer (1: Yes, 0: No) |
+| `used_chip` | Whether a chip was used in the transaction (1: Yes, 0: No) |
+| `used_pin_number` | Whether a PIN number was used (1: Yes, 0: No) |
+| `online_order` | Whether the transaction was online (1: Yes, 0: No) |
+| **`fraud`** | **Target variable:** Indicates if the transaction was fraudulent (1: Fraud, 0: Legitimate) |
+
+---
+
+## 🛠️ Setup and Installation
+
+### Prerequisites
+* Python 3.x
+
+### Dependencies
+
+This project requires the following libraries, as listed in `requirements.txt`:
+```bash
+pandas
+numpy
+scikit-learn
+streamlit
+joblib
+matplotlib
+seaborn
+
 # Credit Card Fraud Detection
 
 ## Table of Contents
@@ -17,31 +77,6 @@
 10. [Model Comparison](#model-comparison)  
 11. [Model Deployment](#model-deployment)  
 12. [Conclusion](#conclusion)
-    
----
-
-## Project Overview  
-This project focuses on detecting credit card fraud using machine learning techniques to mitigate financial losses by identifying fraudulent transactions.
-
-## Problem Statement  
-Fraudulent transactions are rare and hard to detect, posing a significant challenge to financial institutions. The goal is to identify these fraudulent transactions without disrupting legitimate activities.
-
-## Project Objective  
-To build a machine learning model capable of accurately predicting fraudulent credit card transactions, minimizing false positives while maximizing fraud detection.
-
-## Column Dictionary  
-| Column Name                     | Description                                                     |
-|----------------------------------|-----------------------------------------------------------------|
-| `distance_from_home`             | Distance from the cardholder's home to the transaction location |
-| `distance_from_last_transaction` | Distance from the previous transaction                          |
-| `ratio_to_median_purchase_price` | Ratio of transaction value to the median purchase price         |
-| `repeat_retailer`                | Whether the transaction was from a repeat retailer (1: Yes, 0: No)|
-| `used_chip`                      | Whether a chip was used in the transaction (1: Yes, 0: No)      |
-| `used_pin_number`                | Whether a PIN number was used (1: Yes, 0: No)                   |
-| `online_order`                   | Whether the transaction was online (1: Yes, 0: No)              |
-| `fraud`                          | Indicates if the transaction was fraudulent (1: Fraud, 0: Legitimate)|
-
----
 
 ## Data Preprocessing  
 
@@ -116,12 +151,6 @@ To handle outliers, we capped values using the Interquartile Range (IQR) method 
 
 ## Model Comparison  
 We compared both models using accuracy, precision, recall, and F1-score metrics, summarized in a DataFrame for easy reference.
-
----
-
-## Model Deployment  
-- **Model & Scaler Saving:** Saved the trained model and scaler for deployment using `joblib`.  
-- **Deployment Platform:** Deployed using **Streamlit** on **Streamlit Cloud** for real-time predictions.
 
 ---
 
